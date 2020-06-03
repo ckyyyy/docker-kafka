@@ -1,5 +1,5 @@
 # Kafka
-Develop Kafka using docker with spring boot producer
+Develop Kafka using docker with spring boot producer and consumer
  
 ### Start docker project
 ```docker-compose -f docker-compose.yml up```
@@ -19,3 +19,9 @@ Develop Kafka using docker with spring boot producer
 ```./bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic test_kafka --from-beginning```
 Return Object based on the function
 ![image](https://github.com/ckyyyy/docker-kafka/blob/master/image/producer_consume_kafka_topic.png)
+
+### Publish to the Kafka Topic via Console
+```./bin/kafka-console-producer.sh --broker-list localhost:9092 --topic test_kafka```
+![image](https://github.com/ckyyyy/docker-kafka/blob/master/image/consumer_produce_kafka_topic.png)
+### Spring Boot Kafka Consumer
+![image](https://github.com/ckyyyy/docker-kafka/blob/master/image/consumer_consume_kafka_topic.png)
